@@ -102,6 +102,26 @@ map E gT
 map R gt
 
 
+" (Shift)Tab (de)indents code
+vnoremap <Tab> >
+vnoremap <S-Tab> <
+
+" Capital JK move code lines/blocks up & down
+" TODO improve functionality
+nnoremap K :move-2<CR>==
+nnoremap J :move+<CR>==
+xnoremap K :move-2<CR>gv=gv
+xnoremap J :move'>+<CR>gv=gv
+
+" Search results centered please
+nnoremap <silent> n nzz
+nnoremap <silent> N Nzz
+nnoremap <silent> * *zz
+nnoremap <silent> # #zz
+nnoremap <silent> g* g*zz
+nnoremap <C-o> <C-o>zz
+nnoremap <C-i> <C-i>zz
+
 " disable audible bell
 set noerrorbells visualbell t_vb=
 
